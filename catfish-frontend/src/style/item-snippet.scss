@@ -51,7 +51,7 @@
     }
 
     .snippet-title {
-        @extend .col-sm-3, .no-gutters;
+        @extend .col-sm-4, .no-gutters;
         overflow: hidden;
         white-space: nowrap;
         padding: 0 !important;
@@ -61,7 +61,7 @@
     }
 
     .snippet-preview {
-        @extend .col-9, .d-none, .d-sm-block;
+        @extend .col-8, .d-none, .d-sm-block;
         overflow: hidden;
         padding: 0;
         vertical-align: middle;
