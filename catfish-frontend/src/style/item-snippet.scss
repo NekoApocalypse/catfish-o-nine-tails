@@ -1,0 +1,130 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'commons.scss';
+
+.base-snippet {
+    @extend .col-md-12;
+    @extend .d-flex; 
+    @extend .justify-content-between;
+    padding: 1rem 1.5rem 1rem 1.5rem !important;
+    border-bottom: 1px $light-color solid;
+}
+
+.null-snippet {
+    color: $secondary;
+    span {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.title-snippet {
+    @extend .base-snippet;
+    padding: 0.5rem 0 0.5rem 0;
+    .snippet-title {
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+.subtitle-snippet {
+    @extend .base-snippet;
+    padding: 0.3rem 0 0.3rem 0 !important;
+    text-align: center;
+    .snippet-title {
+        @extend .mx-auto;
+        font-size: 12px;
+        font-weight: normal;
+        color: $secondary;
+    }
+}
+
+.item-snippet {
+    @extend .base-snippet;
+    cursor: pointer;
+    &:hover {
+        background-color: $tint-color;
+    }
+
+    .left-panel {
+        @extend .float-left, .d-flex, .col-10, .no-gutters;
+        padding: 0 !important;
+    }
+
+    .snippet-title {
+        @extend .col-sm-3, .no-gutters;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 !important;
+        max-width: 80%;
+        //padding-left: 1rem !important;
+        vertical-align: middle;
+    }
+
+    .snippet-preview {
+        @extend .col-9, .d-none, .d-sm-block;
+        overflow: hidden;
+        padding: 0;
+        vertical-align: middle;
+        color: $secondary;
+    }
+
+    .right-panel {
+        @extend .float-right, .col-2;
+        padding: 0 !important;
+    }
+}
+
+.active-snippet {
+    @extend .base-snippet;
+    background-color: $tint-color;
+    .snippet-form {
+        @extend .col-12;
+        padding: 0 !important;
+        .title-field {
+            @extend .col-12;
+            margin-bottom: 0.5rem;
+        }
+        .textarea-fix {
+            width: 100%;
+        }
+        .description-field {
+            // @extend .col-12;
+            margin-bottom: 0.5rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+            resize: none;
+            outline: none;
+            width: 100%;
+        }
+        .priority-box {
+            @extend .float-left;
+            vertical-align: middle;
+            margin-top: 1rem;
+            margin-left: 0.25rem;
+        }
+        .button-yes {
+            @extend .btn, .m-1;
+            float: right;
+            background-color: $theme-color;
+            color: black;
+        }
+        .button-no {
+            @extend .btn, .m-1;
+            float: right;
+            background-color: transparent;
+            color: $secondary;
+        }
+    }
+}
+
+.addition-snippet {
+    @extend .base-snippet;
+    .snippet-form {
+        @extend .d-flex, .col-12;
+        padding: 0 !important;
+        .title-field {
+            @extend .m-1;
+            width: 40%;
+        }
+    }
+}
