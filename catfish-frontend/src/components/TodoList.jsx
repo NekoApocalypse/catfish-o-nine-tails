@@ -141,7 +141,7 @@ class ItemSnippet extends Component {
               onChange={(e) => this.setState(
                 {description: e.target.value}
               )}
-              required
+              // required
             />
             <div className="priority-box">
               {is_complete? (
@@ -199,6 +199,7 @@ class AdditionSnippet extends Component {
       is_complete: false,
       prioriry: "N",
     });
+    console.log('resetting addition snippet state...');
   }
 
   togglePriority(e) {
@@ -223,7 +224,6 @@ class AdditionSnippet extends Component {
 
   submitItem() {
     this.props.submitItem(this.state);
-    this.resetState();
   }
 
   render() {
@@ -278,7 +278,8 @@ class AdditionSnippet extends Component {
               >取消</button>
               <button className="button-yes"
                 onClick={() => {
-                  this.props.submitItem(this.state)
+                  this.props.submitItem(this.state);
+                  this.resetState();
                 }}
               >保存</button>
             </form>
@@ -300,7 +301,7 @@ class TodoList extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchItems();
+    this.props.fetchItems('time');
   }
 
   resetForm = () => {
@@ -331,7 +332,7 @@ class TodoList extends Component {
   }
 
   deleteItem = (id) => {
-    this.props.deleteItem(id);
+    this.props.deleteItem(id).then(this.resetForm());
   }
 
   deactivate = () => {

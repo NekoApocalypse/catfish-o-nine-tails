@@ -67,12 +67,12 @@ export const fetchItems = (order) => {
       .then(res => res.json())
       .then(items => {
         if(order === 'time') {
-          items.sort((a, b) => (a.id - b.id));
+          items.sort((a, b) => (b.id - a.id));
         } else if (order === 'is_complete') {
           items.sort((a, b) => {
             if (a.is_complete && !b.is_complete) return 1;
             if (b.is_complete && !a.is_complete) return -1;
-            return (a.id - b.id);
+            return (b.id - a.id);
           })
         }
         return dispatch(

@@ -5,7 +5,7 @@ from django.db import models
 
 class TodoList(models.Model):
     title = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(blank=True, default='')
     create_time = models.DateTimeField(auto_now_add=True)
     expire_date = models.DateField(null=True, default=None)
     PRIORITY_CHOICES = (

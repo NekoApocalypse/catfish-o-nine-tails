@@ -12,7 +12,7 @@ function todoList(state=initialState, action) {
   let itemList = state.slice();
   switch (action.type) {
     case 'ADD_ITEM':
-      return [...state, action.item];
+      return [action.item, ...state];
     case 'UPDATE_ITEM':
       let target = itemList[action.id];
       target = {...target, ...action.item}
