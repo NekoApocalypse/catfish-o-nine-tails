@@ -19392,7 +19392,8 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 0.5rem;
   margin-bottom: 0.2rem;
   cursor: pointer;
-  transition: all 0.1s ease-in-out; }
+  transition: all 0.1s ease-in-out;
+  user-select: none; }
 
 .dot-yes {
   vertical-align: middle;
@@ -19422,7 +19423,8 @@ a.text-dark:hover, a.text-dark:focus {
   float: right;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.1s ease-in-out; }
+  transition: all 0.1s ease-in-out;
+  user-select: none; }
 
 .priority-l {
   border: 1px #6c757d solid;
@@ -19454,7 +19456,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .filter-toggle {
   cursor: pointer;
-  transition: all 0.1s ease-in-out; }
+  transition: all 0.1s ease-in-out;
+  user-select: none; }
   .filter-toggle:hover {
     color: #6c757d; }
 

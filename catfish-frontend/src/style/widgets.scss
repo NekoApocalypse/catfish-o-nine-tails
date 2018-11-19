@@ -11,6 +11,7 @@
   margin-bottom: 0.2rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  user-select: none;
 }
 
 .dot-yes {
@@ -49,6 +50,7 @@
     font-size: 14px;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    user-select: none;
 }
 
 .priority-l {
@@ -91,6 +93,7 @@
 .filter-toggle {
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    user-select: none;
     &:hover {
         color: $secondary;
     }
