@@ -17,12 +17,13 @@
 
 ## Setup
 
-* Clone this rep
-* Create virtualenv on project root *(use python 3)*
-* run `pip install -r requirements.txt`
-* `cd catfish-frontend` and run `npm install`
-* In `catfish` run `python manage.py runserver` to start backend server.
-* In `catfish-frontend` run `npm run start` to start frontend server.
+* Clone this repository
+* Create & activate virtualenv on project root *(use python 3)*
+* Install python dependencies: `pip install -r requirements.txt`
+* Install npm dependencies: `cd catfish-frontend` and run `npm install`
+* Make initial migrations: in `catfish` folder, run `python manage.py migrate`
+* Start backend development server: in `catfish` folder, run `python manage.py runserver`
+* Start frontent development server: in `catfish-frontend` run `npm run start`
 
 ### Pending Features
 
