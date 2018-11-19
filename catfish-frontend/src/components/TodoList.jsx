@@ -199,7 +199,7 @@ class AdditionSnippet extends Component {
       is_complete: false,
       prioriry: "N",
     });
-    console.log('resetting addition snippet state...');
+    // console.log('resetting addition snippet state...');
   }
 
   togglePriority(e) {
@@ -402,7 +402,7 @@ class TodoList extends Component {
                     }));
                 }}
               >
-                <span>备忘录里空空如也... 添加新条目试试？</span>
+                <span>备忘录是空的... 添加新条目试试？</span>
               </div>
             )}
             {this.props.todoList.map((item, id) => {
@@ -441,7 +441,7 @@ class TodoList extends Component {
       <footer className="container-fluid">
         <div className="row">
           <div className="col-md-12 text-center">
-            <span>Made by <Link to='/contact'>NekoApocalypse</Link></span>
+            <span>Made by <a href='https://github.com/NekoApocalypse/catfish-o-nine-tails'>NekoApocalypse</a></span>
           </div>
         </div>
       </footer>

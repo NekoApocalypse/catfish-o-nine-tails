@@ -32,3 +32,7 @@
 * 添加用户登陆和授权功能
 * 部署至 AWS 服务器
 * 设置 Paginate 功能
+
+### Demo
+
+![Demo](demo/demo.gif)
