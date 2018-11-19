@@ -32,6 +32,11 @@
 * 添加用户登陆和授权功能
 * 部署至 AWS 服务器
 * 设置 Paginate 功能
+* 删除条目时弹出 Modal 确认
+
+### Known Problems & Pending Fix
+
+* Separate compiled css files from source code
 
 ### Demo
 
