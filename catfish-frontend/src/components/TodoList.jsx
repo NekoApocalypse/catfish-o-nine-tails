@@ -301,7 +301,19 @@ class TodoList extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchItems('time');
+    // This one works
+    this.props.fetchItems()
+      .then(
+        () => this.props.sortItems('time')
+      )
+    // This one does not work
+    /* 
+    this.props.fetchItems()
+      .then(
+        this.props.sortItems('time')
+      )
+    */
+   // Fuck JavaScript
   }
 
   resetForm = () => {
@@ -345,9 +357,11 @@ class TodoList extends Component {
       order_by_complete: !prevState.order_by_complete
     }));
     if(currentOrder) {
-      this.props.fetchItems('time');
+      //this.props.fetchItems('time');
+      this.props.sortItems('time');
     } else {
-      this.props.fetchItems('is_complete');
+      //this.props.fetchItems('is_complete');
+      this.props.sortItems('is_complete');
     }
   }
 
@@ -467,9 +481,12 @@ const mapDispatchToProps = dispatch => {
       return dispatch(todoList.deleteItem(id));
     },
     fetchItems: (order) => {
-      dispatch(todoList.fetchItems(order));
+      return dispatch(todoList.fetchItems(order));
+    },
+    sortItems: (order) => {
+      return dispatch(todoList.sortItems(order));
     }
-  }
+  } 
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

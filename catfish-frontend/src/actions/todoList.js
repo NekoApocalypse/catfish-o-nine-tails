@@ -41,7 +41,7 @@ export const updateItem = (item, id) => {
           id
         })
       })
-    }
+  }
 }
 
 export const deleteItem = id => {
@@ -57,6 +57,25 @@ export const deleteItem = id => {
           })
         }
       })
+  }
+}
+ 
+export const sortItems = (order) => {
+  return (dispatch, getState) => {
+    let items = getState().todoList;
+    if(order === 'time') {
+      items.sort((a, b) => (b.id - a.id));
+    } else if (order === 'is_complete') {
+      items.sort((a, b) => {
+        if (a.is_complete && !b.is_complete) return 1;
+        if (b.is_complete && !a.is_complete) return -1;
+        return (b.id - a.id);
+      })
+    }
+    return dispatch({
+      type: 'REFRESH_ITEMS',
+      items
+    });
   }
 }
 
@@ -75,12 +94,10 @@ export const fetchItems = (order) => {
             return (b.id - a.id);
           })
         }
-        return dispatch(
-          {
-            type: 'FETCH_ITEMS',
-            items
-          }
-        );
+        return dispatch({
+          type: 'FETCH_ITEMS',
+          items
+        });
       })
   }
 }
