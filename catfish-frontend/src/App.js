@@ -8,7 +8,7 @@ import NotFound from './components/NotFound';
 import catfishApp from './reducers';
 // import logo from './logo.svg';
 import logo from './trash-alt.svg';
-import './style/App.css';
+import './build/style/App.css';
 
 let store = createStore(catfishApp, applyMiddleware(thunk));
 
