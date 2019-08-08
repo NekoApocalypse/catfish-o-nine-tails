@@ -1,5 +1,7 @@
 # 渔猫笔记
 
+**Deprecated** 仅供学习用途。代码中有非常多的 bad practice，请不要效仿。
+
 使用 Django, Django REST, REACT 框架的记事本应用。
 
 ## Features
